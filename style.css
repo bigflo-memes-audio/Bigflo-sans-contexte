@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+.pagememe {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+figure {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+audio {
+    width: 100%;
+}
+
+/* Ca c'est pour toute la page visible: */
+body {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-family: "Lexend Deca", sans-serif;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.page {
+    max-width: 800px;
+    /* largeur du bloc */
+    margin: 30px auto 100px auto;
+    /* en haut| à droite | en bas | à gauche */
+    padding: 10px 30px 30px 30px;
+    background-color: #f2f2f2;
+}
+
+.boite {
+    background-color: #fffefec4;
+    /* text-align: center;*/
+    border: 10px solid #2458a2e4;
+    max-width: 600px;
+    /* largeur du bloc */
+    margin: 10px auto 10px auto;
+    /* en haut/ à droite / en bas / à gauche */
+    padding: 10px 10px 10px 10px;
+}
+
+.boite2 {
+    background-color: #2458a2e4;
+    /* text-align: center;*/
+    max-width: 400px;
+    /* largeur du bloc */
+    margin: 20px auto 20px auto;
+    /* en haut/ à droite / en bas / à gauche */
+    padding: 30px 30px 30px 30px;
+    color: #ffffff;
+}
+
+
+
+/* Des marges autour de la page visible */
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    /* on met tous les boutons sur une ligne */
+    flex-wrap: wrap;
+    /* passage à la ligne s'il y a pas assez de place sur une ligne */
+    justify-content: center;
+    /* pour centrer les boutons horizontalement */
+    position: sticky;
+    top: 0;
+    background-color: #2458a2e4;
+    color: #ffffff;
+    margin: 0px 0px;
+    /*pour avoir la barre collée au bord */
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /*largeur de la barre  */
+    /*
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    /*pour avoir des barres autour de la barre de navigation */
+
+}
+
+
+nav .onglets {
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    /* espace entre chaque noms de lien */
+}
+
+nav a:hover {
+    color: #7900fa;
+    /* couleur du texte quand la souris passe sur le lien*/
+}
+
+nav a {
+    text-decoration: none;
+    /*sans ça c'est sousligné*/
+    color: #ffffff;
+    /*sans ça c'est bleu*/
+}
+
+nav .buttons button {
+    padding: 20px 20px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    /* souris passe en main si sur le bouton*/
+    outline: none;
+}
+
+/* Fin de la barre de navigation */
+
+
+figure {
+    width: fit-content;
+    margin: 0 auto;
+    /* centre le bloc entier */
+    text-align: left;
+    /* texte collé à gauche */
+}
+
+.pagememe {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    color: #2458a2e4;
+}
+
+h2 {
+    font-weight: 500;
+    color: #2458a2e4;
+}
+
+header {
+    text-align: center;
+    /* centre horizontalement le texte */
+}
+
+img {
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.petite {
+    width: 100%;
+    max-width: 200px;
+}
+
+.moyenne {
+    width: 100%;
+    max-width: 400px;
+}
+
+.intermediaire {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.colonnes {
+    padding: 0 15px;
+    display: flex;
+    /* parce que c'est un site pour flex (non) */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.aboutme {
+    flex: 1;
+    text-align: justify;
+
+}
+
+/* Fin du header */
+
+/* Pied de page */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2458a2e4;
+    color: #ffffff8a;
+    text-align: center;
+    padding: 10px;
+
+}
+
+footer .mail {
+    text-decoration: none;
+    /*sans ça c'est sousligné*/
+    color: #ffffff;
+    /*sans ça c'est bleu*/
+}
+
+footer .mail:hover {
+    color: #7900fa;
+    /* couleur du texte quand la souris passe sur le lien*/
+}
+
+h1 {
+    color: #2458a2e4;
+}
+
+/* Fin du pied de page */
+
+/* version pour les petits ecrans, per ex des telephones: */
+@media screen and (max-width: 700px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: #f2f2f2;
+        font-size: 0.8rem;
+        padding-top: 50px;
+        /* pour compenser la navbarre */
+        padding-bottom: 100px;
+        /* pour compenser le footer */
+    }
+
+
+
+    .img-fluid {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        /* passage à la ligne s'il y a pas assez de place sur une ligne */
+        justify-content: center;
+        /* pour centrer les boutons horizontalement */
+        justify-content: safe;
+        /* pour centrer les boutons horizontalement */
+        position: fixed;
+        top: 0;
+        background-color: #2458a2e4;
+        color: #ffffff;
+        margin: 0px 0px;
+        /*pour avoir la barre collée au bord */
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        /*largeur de la barre  */
+        /*
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #000000;
+        /*pour avoir des barres autour de la barre de navigation */
+
+    }
+
+    nav .onglets {
+        gap: auto;
+        /* espace entre chaque noms de lien */
+    }
+
+    .boite,
+    .boite2 {
+        width: 90%;
+        max-width: 600px;
+        margin: 10px auto;
+    }
+
+    .petite {
+        width: 100%;
+        max-width: 90px;
+    }
+
+
+
+    .moyenne {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intermediaire {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+
+    .colonnes {
+
+        padding: 0 15px;
+        display: flex;
+        /* parce que c'est un site pour flex (non) */
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+
+
+    .caseintro h1,
+    .caseintro h2 {
+        font-size: 0.9rem;
+    }
+
+
+    .page {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+
+}
